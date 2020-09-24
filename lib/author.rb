@@ -10,13 +10,13 @@ class Author
     Post.all.select {|posts| posts.author == self}
   end
   
-  def add_post(posts)
-    posts.author = self
+  def add_post(post)
+    post.author = self
   end
   
   def add_post_by_title(title)
-    posts = Post.new(title)
-    posts.author = self
+    post = Post.new(title)
+    post.author = self
   end
   
   def self.post_count
